@@ -26,7 +26,7 @@ def compress_string(data):
 context = ssl._create_unverified_context()
 
 # Configuración
-url = "https://ciiec.buap.mx/Muon-Decay/datosReceiver10000.php"
+url = "https://XXXXXXXX/Muon-Decay/datosReceiver10000.php"
 print("Starting data taking ...",end=" ")
 ms = datetime.now()
 #date_epoch = time.mktime(ms.timetuple())  # UTC
