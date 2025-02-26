@@ -20,7 +20,7 @@ def compress_string(data):
 
 context = ssl._create_unverified_context()
 
-url = "https://ciiec.buap.mx/Muon-Decay/muon_test.php"
+url = "https://XXXXXXX/Muon-Decay/muon_test.php"
 ms = datetime.now()
 
 event="Esta es una prueba " + str(ms)
