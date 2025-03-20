@@ -6,6 +6,7 @@
 # ...Check  crontab is installed with
 # systemctl status cron
 # or install it with sudo apt install cron
+# and enable it with sudo systemctl enable cron
 # ...Enter 
 # crontab -l
 # ...Check this line shows up
