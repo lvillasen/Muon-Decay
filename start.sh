@@ -5,6 +5,7 @@
 # chmod a+x stop.sh
 # ...Check  crontab is installed with
 # systemctl status cron
+# or install it with sudo apt install cron
 # ...Enter 
 # crontab -l
 # ...Check this line shows up
