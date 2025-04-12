@@ -5,4 +5,4 @@ Measures the muon decay lifetime with a liquid-scintillator detector on-line and
 
 ## Demo page
 
-https://cieec.buap.mx/Muon-Decay
+https://ciiec.buap.mx/Muon-Decay
