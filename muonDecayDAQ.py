@@ -70,7 +70,7 @@ trig_mode = "NORMAL"
 ##########################################################################inputs
 CHANNEL = 1 # 1
 GAIN = 1 # Select 1 or 20 for +- 1 V or +- 20 V according to your RP jumper LV or HV
-TRESHOLD_VOLT = -.015 # Volt
+TRESHOLD_VOLT = -.025 # Volt
 POINTS_SAVE_AFTER_TRIGGER = 1000 # ns
 WINDOW_DOUBLE_PULSE = 20000 # ns
 EDGE = 0 # 1 for PosEdge trigger  0 for NegEdge trigger
