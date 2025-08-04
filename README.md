@@ -1,5 +1,5 @@
 # Muon-Decay
-Measures the muon decay lifetime with a liquid-scintillator detector on-line and in real-time.
+Measures the muon decay lifetime with a liquid-scintillator detector on-line and in real time.
 
 
 
