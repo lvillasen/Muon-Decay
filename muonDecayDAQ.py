@@ -14,57 +14,6 @@ max_evts_per_file = 10000
 
 
 
-# Función para comprimir un string
-def compress_string(data):
-    # Comprimir el string usando gzip
-    buf = io.BytesIO()
-    with gzip.GzipFile(fileobj=buf, mode='w') as f:
-        f.write(data.encode('utf-8'))
-    return buf.getvalue()
-
-# Configurar un contexto SSL que ignore la verificación del certificado
-context = ssl._create_unverified_context()
-
-# Configuración
-url = "https://XXXXXXXX/Muon-Decay/datosReceiver10000.php"
-print("Starting data taking ...",end=" ")
-ms = datetime.now()
-#date_epoch = time.mktime(ms.timetuple())  # UTC
-#print(strftime('%Y%m%d-%H%M%S', localtime(date_epoch)))
-
-
-# Ruta del archivo
-file_path_evt = "/root/Muon-Decay/evtNumber.txt"
-
-def read_event_number(file_path_evt):
-    """Lee el número evt_number del archivo, o devuelve 0 si el archivo no existe."""
-    if os.path.exists(file_path_evt):
-        with open(file_path_evt, 'r') as file:
-            try:
-                return int(file.read().strip())  # Leer y convertir a entero
-            except ValueError:
-                return 0  # Si el contenido no es válido, asumimos 0
-    else:
-        return 0
-
-def write_event_number(file_path, evt_number):
-    with open(file_path, 'w') as file:
-        file.write("{}\n".format(evt_number))  # Usar format para escribir el número
-
-
-# Leer el número actual
-evt_number = read_event_number(file_path_evt)
-print("Número actual: {}".format(evt_number))
-
-
-ms = datetime.now()
-regset = MMIO(0x41210000, 0xc)
-NumSinglesLast = regset.read32(8) % (256*256)
-NumDoublesLast = int(regset.read32(8) / (256*256))
-regset.close()
-trig_mode = "NORMAL"
-
-
 
 
 ##########################################################################inputs
@@ -186,12 +135,12 @@ while time.time() - start_time < 60:
         #print(event)
         time.sleep(.5)
         print(evt_number,strftime('%Y%m%d-%H%M%S', localtime(date_epoch)),end=",")
-        compressed_data=compress_string(event)
+        XXXXXXXXXXXX
         try:
             # Configurar solicitud POST
             request = urllib.request.Request(
                 url,
-                data=compressed_data,
+                XXXXXXXXXXXXX
                 headers={"Content-Type": "application/x-www-form-urlencoded"},
             )
             # Enviar solicitud con contexto SSL
